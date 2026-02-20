@@ -187,20 +187,25 @@
         </div>
 
         <form class="form" name="contact" method="POST" data-netlify="true" action="/success.html">
-          <label>
-            Your name
-            <input type="hidden" name="form-name" value="contact" />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" placeholder="e.g., jane@email.com" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="4" placeholder="Tell me what you need..." required></textarea>
-          </label>
-          <button class="btn" type="submit">Send message</button>
-          <p class="hint">We would appreciate hearing from you.</p>
+          <input type="hidden" name="form-name" value="contact" />
+
+            <label>
+              Your name
+          <input type="text" name="name" placeholder="e.g., Jane" required />
+            </label>
+
+            <label>
+              Email
+          <input type="email" name="email" placeholder="e.g., jane@email.com" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="4" placeholder="Tell me what you need..." required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send message</button>
+            <p class="hint">We would appreciate hearing from you.</p>
         </form>
       </div>
     </section>
