@@ -157,10 +157,10 @@
           </ul>
         </div>
 
-        <form class="form" onsubmit="handleSubmit(event)">
+        <form class="form" name="contact" method="POST" data-netlify="true">
           <label>
             Your name
-            <input type="text" name="name" placeholder="e.g., Jane" required />
+            <input type="hidden" name="form-name" value="contact" />
           </label>
           <label>
             Email
