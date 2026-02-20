@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silent Aid</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">Silent Aid</div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-small" href="#contact">Request demo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Emergency help — without saying a word.</h1>
+          <p class="lead">
+            Silent Aid is a discreet emergency alert system that connects users to nearby facilities instantly.
+            Built for hospitals, NGOs, campuses, and community programs.
+          </p>
+          <div class="cta">
+            <a class="btn" href="#contact">Request a demo</a>
+            <a class="btn btn-ghost" href="#how">See how it works</a>
+          </div>
+
+          <div class="mini-stats">
+            <div class="stat">
+              <div class="stat-num">⚡</div>
+              <div class="stat-label">Fast alerts</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">🔒</div>
+              <div class="stat-label">Secure auth</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">🏥</div>
+              <div class="stat-label">Facility-ready</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card">
+            <div class="card-top">
+              <div class="pill">Live demo preview</div>
+              <div class="dot-row">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>Emergency Event</h3>
+              <p class="muted">User triggered alert • Nairobi</p>
+
+              <div class="event">
+                <div class="event-row">
+                  <span>Status</span><strong class="good">Active</strong>
+                </div>
+                <div class="event-row">
+                  <span>Facility</span><strong>Nearest Clinic</strong>
+                </div>
+                <div class="event-row">
+                  <span>Action</span>
+                  <button class="fake-btn" type="button" onclick="showMessage()">Close event</button>
+                </div>
+              </div>
+
+              <p class="hint">This is a UI mock. Later we’ll connect it to your FastAPI backend.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Silent Aid</h2>
+        <p class="muted">
+          Silent Aid helps people get assistance during emergencies when calling or speaking isn’t possible.
+          Facilities receive alerts and can manage events from a simple dashboard.
+        </p>
+      </div>
+    </section>
+
+    <section id="how" class="section alt">
+      <div class="container">
+        <h2>How it works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Trigger</h3>
+            <p class="muted">User taps an emergency button or scans a QR token.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Notify</h3>
+            <p class="muted">Silent Aid sends the alert to a registered facility instantly.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Respond</h3>
+            <p class="muted">Facility staff receives the alert and coordinates response.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3>Close</h3>
+            <p class="muted">Event is closed once assistance is provided.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Core features</h2>
+        <div class="grid">
+          <div class="feature">
+            <h3>JWT Login</h3>
+            <p class="muted">Secure authentication for facilities and staff.</p>
+          </div>
+          <div class="feature">
+            <h3>Emergency Scan</h3>
+            <p class="muted">Scan tokens/QRs to trigger events quickly.</p>
+          </div>
+          <div class="feature">
+            <h3>Event Lifecycle</h3>
+            <p class="muted">Create, track, and close emergency events.</p>
+          </div>
+          <div class="feature">
+            <h3>API-first</h3>
+            <p class="muted">FastAPI + OpenAPI docs for easy integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container contact">
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">Want a demo, partnership, or to contribute?</p>
+          <ul class="contact-list">
+            <li><strong>Developer:</strong> Rodgers Faustine</li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/Rodger-CZ" target="_blank" rel="noreferrer">Rodger-CZ</a></li>
+            <li><strong>Email:</strong> <span class="muted">add later</span></li>
+          </ul>
+        </div>
+
+        <form class="form" onsubmit="handleSubmit(event)">
+          <label>
+            Your name
+            <input type="text" name="name" placeholder="e.g., Jane" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="e.g., jane@email.com" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Tell me what you need..." required></textarea>
+          </label>
+          <button class="btn" type="submit">Send message</button>
+          <p class="hint">This form is a mock. We can connect it to Netlify Forms later.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span>© 2026 Silent Aid</span>
+      <span class="muted">Built by Rodgers • FastAPI-ready</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
